@@ -4,15 +4,22 @@
   "description": "使用typescript实现的以太坊HD钱包 ## 包含功能 * 钱包助记词   * 助记词生成   * 导入导出   * 助记词校验   * 助记词加密（AES）   * 助记词的存储 * ETH地址   * 助记词bip44协议生成地址   * 私钥的存储   * 使用私钥签名交易 * 链上操作   * 发送交易到链上   * 从链上获取钱包信息",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "bip39": "^3.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.2",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/bip39": "^3.0.0"
   }
 }
