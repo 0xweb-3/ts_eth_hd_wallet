@@ -14,11 +14,15 @@ npm init -y
 
 # 安装ts-node和typescript
 npm install -g ts-node typescript
+npm install --save-dev webpack webpack-cli ts-loader
+npx tsc --init # 创建ts配置文件
 ```
+
 ### 测试运行环境
 ```shell
 mkdir src
-cd index.ts
+cd src
+touch index.ts
 ```
 `src/index.ts`下内容为
 ```typescript
@@ -48,7 +52,7 @@ npx tsc --init
   }
 }
 ```
-配置`Jest`,在项目根目录下创建一个 jest.config.js 文件，并添加以下内容：
+配置`Jest`,在项目根目录下创建一个`jest.config.js`文件，并添加以下内容：
 ```javascript
 module.exports = {
   preset: 'ts-jest',
@@ -64,7 +68,7 @@ export const sum = (a: number, b: number): number => {
 ```
 创建测试文件`index.test.ts`
 ```typescript
-// src/sum.test.ts
+// src/index.test.ts
 import { sum } from './index';
 
 test('adds 1 + 2 to equal 3', () => {
@@ -83,8 +87,6 @@ test('adds 1 + 2 to equal 3', () => {
 ```shell
 npm test
 ```
-
-
 
 ## 包含功能
 * 钱包助记词
