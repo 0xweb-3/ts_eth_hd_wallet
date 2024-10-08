@@ -37,7 +37,6 @@ Hello, TypeScript!
 安装
 ```shell
 npm install ts-jest jest @types/jest --save-dev
-npx tsc --init
 ```
 修改配置文件`tsconfig.json`确保配置【一般不用修改】：
 ```shell
@@ -61,7 +60,7 @@ module.exports = {
 ```
 修改`src/index.ts` 
 ```typescript
-// src/sum.ts
+// src/index.ts
 export const sum = (a: number, b: number): number => {
   return a + b;
 };
