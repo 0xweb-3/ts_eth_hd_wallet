@@ -58,6 +58,10 @@ Address_Index: 用于生成具体地址的索引。
 ```
 [bip44协议对照表](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
+## 签名流程
+
+## 交易在以太坊上执行流程
+
 
 ## 02与04公钥的区别
 
