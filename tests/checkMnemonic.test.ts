@@ -1,6 +1,6 @@
 // tests/mnemonic.test.ts
 import {generateMnemonic} from '../wallet/mnemonic';
-import {validateMnemonic} from '../wallet/check_mnemonic';
+import {validateMnemonic} from '../wallet/checkMnemonic';
 
 describe('generateMnemonic', () => {
     test("正常助记词校验", async () => {
