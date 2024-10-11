@@ -2,10 +2,10 @@
 import Web3 from 'web3';
 import {TxTraditional, TxEIP1559} from "./types/transactionsTypes";
 
-async function signTransactions(privateKey: string, fromAddress: string, toAddress: string, rpcURL: string, ethNum: number, chainId: number = 1) {
+async function signTransactions(privateKey: string, fromAddress: string, toAddress: string, rpcURL: string, ethNum: number, nonce:bigint, chainId: number = 1) {
     const web3 = new Web3(new Web3.providers.HttpProvider(rpcURL));
-
-    const nonce = await web3.eth.getTransactionCount(fromAddress);
+    // 直接通过包中的方法获取nonce
+    // const nonce = await web3.eth.getTransactionCount(fromAddress);
 
     // 传统交易
     const txTraditional: TxTraditional = {
